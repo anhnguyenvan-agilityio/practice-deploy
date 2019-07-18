@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- <meta charset="utf-8">
+  <meta charset="utf-8">
   <title>Home</title>
   <script type="text/javascript" src="ua-parser-js.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -11,37 +11,18 @@
       var parser = new UAParser();
       $("#text").text("===>" + JSON.stringify(parser.getOS()));
     });
-  </script> -->
+  </script>
 </head>
 
 <body>
-  <!-- <div>
+  <div>
     <h3 id='text'></h3>
-  </div> -->
-  <?xml version="1.0" encoding="utf-8"?>
-  <rss version="2.0">
-    <channel>
-      <title>Anh Nguyen Van</title>
-      <description>Test RSS Campaign</description>
-      <item>
-        <title>Entry Title 1</title>
-        <content>Content 1</content>
-      </item>
-      <item>
-        <title>Entry Title 2</title>
-        <content>Content 2</content>
-      </item>
-      <item>
-        <title>Entry Title 3</title>
-        <content>Content 3</content>
-      </item>
-    </channel>
-  </rss>
+  </div>
 </body>
 
-</html>
+</html> -->
 
-<!-- <?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
   <channel>
     <title>Anh Nguyen Van</title>
@@ -59,4 +40,4 @@
       <content>Content 3</content>
     </item>
   </channel>
-</rss> -->
+</rss>
