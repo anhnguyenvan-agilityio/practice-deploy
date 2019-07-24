@@ -4,20 +4,43 @@
 <head>
   <meta charset="utf-8">
   <title>Home</title>
-  <script type="text/javascript" src="ua-parser-js.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      var parser = new UAParser();
-      $("#text").text("===>" + JSON.stringify(parser.getOS()));
-    });
-  </script>
+  <!-- <script type="text/javascript" src="ua-parser-js.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 </head>
 
 <body>
   <div>
-    <h3 id='text'></h3>
+    <p id='text'>Here</p>
+    <a href="" id="link">Link</a>
   </div>
 </body>
+<script>
+  // $(document).ready(function () {
+  //   var parser = new UAParser();
+  //   $("#text").text("===>" + JSON.stringify(parser.getOS()));
+  // });
+  function getOS() {
+    var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+    if (macosPlatforms.indexOf(platform) !== -1) {
+      os = 'Mac OS';
+    } else if (iosPlatforms.indexOf(platform) !== -1) {
+      os = 'iOS';
+    } else if (windowsPlatforms.indexOf(platform) !== -1) {
+      os = 'Windows';
+    } else if (/Android/.test(userAgent)) {
+      os = 'Android';
+    } else if (!os && /Linux/.test(platform)) {
+      os = 'Linux';
+    }
+    return os;
+  }
+  document.getElementById("text").innerHTML = getOS();
+  document.getElementById("link").href = "google.com"; 
+</script>
 
 </html>
