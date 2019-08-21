@@ -40,17 +40,17 @@
   }
   var os = getOS();
   if (os === 'iOS') {
-    document.getElementById("appleStore").href = `"${linkAppleApp}"`;
-    document.getElementById("googlePlay").href = `"${linkGoogleWeb}"`;
+    document.getElementById("appleStore").href = linkAppleApp;
+    document.getElementById("googlePlay").href = linkGoogleWeb;
   } else if (os === 'Mac OS') {
-    document.getElementById("appleStore").href = `"${linkAppleWeb}"`;
-    document.getElementById("googlePlay").href = `"${linkGoogleWeb}"`;
+    document.getElementById("appleStore").href = linkAppleWeb;
+    document.getElementById("googlePlay").href = linkGoogleWeb;
   } else if (os === 'Android') {
-    document.getElementById("appleStore").href = `"${linkAppleWeb}"`;
-    document.getElementById("googlePlay").href = `"${linkGoogleApp}"`;
+    document.getElementById("appleStore").href = linkAppleWeb;
+    document.getElementById("googlePlay").href = linkGoogleApp;
   } else {
-    document.getElementById("appleStore").href = `"${linkAppleWeb}"`;
-    document.getElementById("googlePlay").href = `"${linkGoogleWeb}"`;
+    document.getElementById("appleStore").href = linkAppleWeb;
+    document.getElementById("googlePlay").href = linkGoogleWeb;
   }
 </script>
 
