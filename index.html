@@ -4,22 +4,21 @@
 <head>
   <meta charset="utf-8">
   <title>Home</title>
-  <!-- <script type="text/javascript" src="ua-parser-js.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 </head>
 
 <body>
   <div>
     <p id='text'>Here</p>
-    <a href="" id="link">Link</a>
+    <a href="" id="appleStore">Apple Store</a>
+    <a href="" id="googlePlay">Google Play</a>
   </div>
 </body>
 <script>
-  // $(document).ready(function () {
-  //   var parser = new UAParser();
-  //   $("#text").text("===>" + JSON.stringify(parser.getOS()));
-  // });
   function getOS() {
+    const linkGoogleApp = 'market://details?id=com.facebook.katana';
+    const linkGoogleWeb = 'http://play.google.com/store/apps/details?id=com.facebook.katana';
+    const linkAppleApp = 'itms-apps://itunes.apple.com/us/app/apple-store/id284882215';
+    const linkAppleWeb = 'https://itunes.apple.com/us/app/apple-store/id284882215';
     var userAgent = window.navigator.userAgent,
       platform = window.navigator.platform,
       macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
@@ -39,8 +38,20 @@
     }
     return os;
   }
-  document.getElementById("text").innerHTML = getOS();
-  document.getElementById("link").href = "google.com"; 
+  var os = getOS();
+  if (os === 'iOS') {
+    document.getElementById("appleStore").href = `${linkAppleApp}`;
+    document.getElementById("googlePlay").href = `${linkGoogleWeb}`;
+  } else if (os === 'Mac OS') {
+    document.getElementById("appleStore").href = `${linkAppleWeb}`;
+    document.getElementById("googlePlay").href = `${linkGoogleWeb}`;
+  } else if (os === 'Android') {
+    document.getElementById("appleStore").href = `${linkAppleWeb}`;
+    document.getElementById("googlePlay").href = `${linkGoogleApp}`;
+  } else {
+    document.getElementById("appleStore").href = `${linkAppleWeb}`;
+    document.getElementById("googlePlay").href = `${linkGoogleWeb}`;
+  }
 </script>
 
 </html>
