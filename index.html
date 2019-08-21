@@ -39,6 +39,7 @@
     return os;
   }
   var os = getOS();
+  document.getElementById("text").innerHTML = os;
   if (os === 'iOS') {
     document.getElementById("appleStore").href = linkAppleApp;
     document.getElementById("googlePlay").href = linkGoogleWeb;
