@@ -14,11 +14,11 @@
   </div>
 </body>
 <script>
+  const linkGoogleApp = 'market://details?id=com.facebook.katana';
+  const linkGoogleWeb = 'http://play.google.com/store/apps/details?id=com.facebook.katana';
+  const linkAppleApp = 'itms-apps://itunes.apple.com/us/app/apple-store/id284882215';
+  const linkAppleWeb = 'https://itunes.apple.com/us/app/apple-store/id284882215';
   function getOS() {
-    const linkGoogleApp = 'market://details?id=com.facebook.katana';
-    const linkGoogleWeb = 'http://play.google.com/store/apps/details?id=com.facebook.katana';
-    const linkAppleApp = 'itms-apps://itunes.apple.com/us/app/apple-store/id284882215';
-    const linkAppleWeb = 'https://itunes.apple.com/us/app/apple-store/id284882215';
     var userAgent = window.navigator.userAgent,
       platform = window.navigator.platform,
       macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
