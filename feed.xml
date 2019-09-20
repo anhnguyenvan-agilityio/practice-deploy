@@ -4,11 +4,13 @@
     <title>Anh Nguyen Van</title>
     <description>Test RSS Campaign</description>
     <item>
-      <content:encoded>
-        <![CDATA[
-        <p>content</p>
-        ]]>
-      </content:encoded>
+      <description>
+        <content:encoded>
+          <![CDATA[
+          <p>content</p>
+          ]]>
+        </content:encoded>
+      </description>
     </item>
   </channel>
 </rss>
