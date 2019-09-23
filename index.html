@@ -569,8 +569,8 @@
               <p>Drummer & Buyer Apps available on</p>
             </div>
             <a href="itms-apps://itunes.apple.com/us/app/apple-store/id1458518029">APP IOS DRUMMER</a>
-            <p id='btnAppBuyer'>BUYER</p><br>
-            <p id='btnAppDrummer'>DRUMMER</p><br>
+            <a id='btnAppBuyer'>BUYER</a><br>
+            <a id='btnAppDrummer'>DRUMMER</a><br>
             <div class="col-12 p-0 mb-3 d-flex justify-content-between">
               <a onclick="getLinkDownload('ANDROID')"><img
                   src="https://d1q2i93v6nvie6.cloudfront.net/public/images/android_App_store_icon.png"></a>
@@ -602,6 +602,10 @@
 
 </body>
 <script>
+  const drummerIOS = 'https://apps.apple.com/us/app/id1458518029';
+  const buyerIOS = 'https://apps.apple.com/us/app/id1459341623';
+  const drummerAndroid = 'https://play.google.com/store/apps/details?id=io.drum.drummer';
+  const buyerAndroid = 'http://play.google.com/store/apps/details?id=io.drum.buyer';
   const btnAppBuyer = document.getElementById('btnAppBuyer');
   const btnAppDrummer = document.getElementById('btnAppDrummer');
   let linkDownloadApp = '';
@@ -629,24 +633,35 @@
   }
   var os = getOS();
   function getLinkDownload(app) {
-    if (app === 'IOS' && os === 'iOS') {
+    // if (app === 'IOS' && os === 'iOS') {
+    //   console.log('IOS');
+    //   // Link for IOS App
+    //   btnAppBuyer.innerHTML = "${linkAppBuyerIOS}";
+    //   btnAppDrummer.innerHTML = "${linkAppDrummerIOS}";
+    // } else if (app === 'ANDROID' && os === 'Android') {
+    //   // Link for App Android
+    //   console.log('Android');
+    //   btnAppBuyer.innerHTML = "${linkAppBuyerAndroid}";
+    //   btnAppDrummer.innerHTML = "${linkAppDrummerAndroid}";
+    // } else if (app === 'ANDROID') {
+    //   // Web
+    //   console.log('Web');
+    //   btnAppBuyer.innerHTML = "${linkWebBuyerAndroid}";
+    //   btnAppDrummer.innerHTML = "${linkWebDrummerAndroid}";
+    // } else {
+    //   btnAppBuyer.innerHTML = "${linkWebBuyerIOS}";
+    //   btnAppDrummer.innerHTML = "${linkWebDrummerIOS}";
+    // }
+    if (app === 'IOS') {
       console.log('IOS');
       // Link for IOS App
-      btnAppBuyer.innerHTML = "${linkAppBuyerIOS}";
-      btnAppDrummer.innerHTML = "${linkAppDrummerIOS}";
-    } else if (app === 'ANDROID' && os === 'Android') {
+      btnAppBuyer.href = buyerIOS;
+      btnAppDrummer.href = drummerIOS;
+    } else {
       // Link for App Android
       console.log('Android');
-      btnAppBuyer.innerHTML = "${linkAppBuyerAndroid}";
-      btnAppDrummer.innerHTML = "${linkAppDrummerAndroid}";
-    } else if (app === 'ANDROID') {
-      // Web
-      console.log('Web');
-      btnAppBuyer.innerHTML = "${linkWebBuyerAndroid}";
-      btnAppDrummer.innerHTML = "${linkWebDrummerAndroid}";
-    } else {
-      btnAppBuyer.innerHTML = "${linkWebBuyerIOS}";
-      btnAppDrummer.innerHTML = "${linkWebDrummerIOS}";
+      btnAppBuyer.href = buyerAndroid;
+      btnAppDrummer.href = drummerAndroid;
     }
   }
 
