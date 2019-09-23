@@ -1,95 +1,138 @@
+<!doctype html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="This is Site Name" />
-  <meta property="og:title" content="This is Title" />
-  <meta property="og:description" content="This is Description ™ ..." />
-  <meta property="og:url" content="https://anhnguyenvan.github.io/practice-deploy/" />
-  <meta property="og:image" content="https://drumio.netlify.com/images/features-phone-browse.png">
-
-  <title>Drummer Invitation</title>
-  <!-- <link href="https://drumio.netlify.com/stylesheets/site.css" rel="stylesheet"> -->
-  <link
-    href="https://gallery.mailchimp.com/0e645d931406853dca058a392/files/ee542550-440f-4c98-95ad-b08497872f43/site.css"
-    rel="stylesheet">
+  <!-- Use the title from a page's frontmatter if it has one -->
+  <title>Drummers</title>
+  <link href="https://d1q2i93v6nvie6.cloudfront.net/public/stylesheets/site.css" rel="stylesheet" />
+  <link rel='icon' href='https://d1q2i93v6nvie6.cloudfront.net/public/images/favicon.ico' type='image/x-icon' />
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-  <script src="https://drumio.netlify.com/javascripts/site.js"></script>
+  <script src="https://d1q2i93v6nvie6.cloudfront.net/public/javascripts/site.js"></script>
 </head>
 
 <body>
-  <section class="bg-primary pad-section-lg pb-5">
-    <div class="container">
-      <div class="row text-center-sm">
-        <div class="col-md-3 col-lg-3">
-          <div class="round icon-xl">
-            <img src="https://drumio.netlify.com/images/profile.jpg">
-          </div>
-        </div>
-        <div class="col-md-9 col-lg-6">
-          <h2 class="mt-3">You're invited!</h2>
 
-          <p class="lead">John smith has invited you to join the fastest growing network of promoters.</p>
-
-          <a href="#download" class="btn btn-outline-light downloadApp">Download App</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!--
+  active_page
+  cta_title
+  cta_url
+-->
 
   <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark navbar-transition">
+    <!--
+  active_page
+  cta_title
+  cta_url
+-->
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+    <a class="navbar-brand" href="../">
+      <img src="https://d1q2i93v6nvie6.cloudfront.net/public/images/drum-logo.png" class="hide-mobile">
+      <img src="https://d1q2i93v6nvie6.cloudfront.net/public/images/drum-logo-circle.png"
+        class="navbar-brand-mobile hide">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
       aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <!-- <span class="navbar-toggler-icon"></span> -->
+      <i class='fa fa-bars fa-lg'></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="https://drum.io">
-        <img src="https://drumio.netlify.com/images/logo.png">
-      </a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
+        <!-- <li class="nav-item ">
+      <a class="nav-link" href="/">Home</a>
+    </li> -->
         <li class="nav-item active">
-          <a class="nav-link" href="">Earn Money</a>
+          <a class="nav-link" href="/drummers.html">Earn Money</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="">Get Offers</a>
+          <a class="nav-link" href="/buyers.html">Get Offers</a>
+        </li>
+        <li class="nav-item d-md-none ">
+          <a class="nav-link" href="/business.html">Drum for Business</a>
         </li>
       </ul>
 
-      <ul class="navbar-nav mt-2 mt-lg-0">
+      <ul class="navbar-nav mt-2 mt-lg-0 d-none d-md-block">
         <li class="nav-item">
-          <a class="btn btn-light" href="">New Business Profile</a>
+          <a class="btn btn-outline-light" href="/business.html">Drum for Business</a>
         </li>
       </ul>
     </div>
 
   </nav>
-  <header class="bg-cover" style="background-image: url(https://drumio.netlify.com/images/header-drummer.png);">
-    <div class="pad-section bg-overlay">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="mb-5">
-              <p class="lead">Drummers</p>
+
+
+  <!--
+  title
+  subtitle
+  content
+  button_title
+  button_target
+  background_image_url
+  featured_image_url
+-->
+
+  <header class='bg-cover' style='background-image: url("images/header-drummer.png");'>
+    <div class='pad-section bg-overlay height-70vh'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-sm-10'>
+            <div class='mb-5'>
+              <p class='lead'>Drummers</p>
               <h1>Earn Money</h1>
 
-              <p>Drum enables anyone to earn money promoting businesses they believe in.</p>
+              <p class="txt-header-lg">Drum enables anyone to earn money promoting businesses they believe in.</p>
             </div>
 
-            <a href="#download" class="btn btn-light downloadApp">Download App</a>
-          </div>
-          <div class="col-sm-6">
-            <div class="pad pad-section-invert-bottom">
-              <img src="https://drumio.netlify.com/images/features-1.png">
+            <a href="" class='btn btn-light mb-3 downloadApp'>Download App</a>
+
+            <br>
+            <a href="https://www.youtube.com/embed/8_nf5l0aHl4" target="_blank" class='btn btn-outline-light'>Play
+              Video</a>
+
+            <div class="modal fade" id="headerModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content header-modal p-sm-2 p-md-3">
+                  <div class="modal-header">
+                    <h3 class="text-center" id="ModalLabel">
+                      Drummer App coming soon!
+                    </h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span class="text-primary" aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Our Drum engineers are putting the finishing touches on the app. Please provide your email for
+                      early access.</p>
+
+                    <form action="https://drumup.us20.list-manage.com/subscribe/post" method="POST">
+                      <input type="hidden" name="u" value="35e04b8107b3a61ba969cdc96">
+                      <input type="hidden" name="id" value=ce063984d1>
+                      <div class="form-group">
+
+                        <input class="form-control" type="email" autocapitalize="off" autocorrect="off" name="MERGE0"
+                          id="MERGE0" size="25" value="">
+
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                          else.</small>
+                      </div>
+                      <button type="submit" class="formEmailButton btn btn-primary" name="submit"
+                        value="Subscribe">Submit</button>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -97,77 +140,98 @@
   </header>
 
 
-  <hr class="special">
+  <hr class='special'>
 
-  <section class="pad-section">
-    <div class="container container-lg text-center">
+  <section class='pad-section'>
+    <div class='container container-lg text-center'>
+      <!--
+  title
+  content
+  wrapper_class
+-->
 
-      <div class="mb-5 text-center">
-        <h2>Earn Money with Ease</h2>
+      <div class='mb-5 text-center'>
+        <h2>Be Your Own Boss</h2>
 
         <p>
-          See drumming in action.
+          See how with Drum.
         </p>
       </div>
 
-      <div class="mb-5">
-        <div class="border-special">
+
+      <!--
+  video_id
+-->
+
+      <div class='mb-5'>
+        <div class='border-special'>
           <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
-              allowfullscreen=""></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/N889r0YAqSc?rel=0"
+              allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
 
       <div class="text-center">
-        <a href="#" class="btn btn-primary downloadApp">Download App</a>
+        <a href="" class='btn btn-primary downloadApp'>Download App</a>
       </div>
 
 
     </div>
   </section>
 
-  <section class="pad-section bg-light">
-    <div class="container text-center">
+  <section class='pad-section bg-light'>
+    <div class='container text-center'>
+      <!--
+  title
+  content
+  wrapper_class
+-->
 
-      <div class="mb-5 text-center container container-md">
+      <div class='mb-5 text-center container container-md'>
         <h2>How it Works</h2>
 
         <p>
-          Be your own boss. Earn commisions 24/7 sharing offers, signing businesses, and bulding your network of
-          Drummers.
+          Earn commisions 24/7 by sharing offers, signing businesses, and building your network of Drummers.
         </p>
       </div>
 
 
-      <div class="row mb-5">
-        <div class="col-sm-4">
-          <div class="icon-lg">
-            <img src="https://drumio.netlify.com/images/icons/icon_4.svg">
+      <!--
+  elements:
+    icon_url
+    title
+    content
+-->
+
+      <div class='row mb-5'>
+        <div class='col-sm-4'>
+          <div class='icon-lg'>
+            <img src="https://d1q2i93v6nvie6.cloudfront.net/public/images/icons/icon_4.svg">
           </div>
-          <h3>Promote &amp; Earn</h3>
+          <h3>Promote & Earn</h3>
           <p>
             Seeking friendly, outgoing salespeople. Create your profile and promote in seconds. There is ZERO cost. We
             pay YOU!
           </p>
         </div>
-        <div class="col-sm-4">
-          <div class="icon-lg">
-            <img src="https://drumio.netlify.com/images/icons/icon_3.svg">
+        <div class='col-sm-4'>
+          <div class='icon-lg'>
+            <img src="https://d1q2i93v6nvie6.cloudfront.net/public/images/icons/icon_3.svg">
           </div>
           <h3>Track Performance</h3>
           <p>
-            Track your personal promotion performance as well as the performance of your Drum network.
+            Track your personal performance as well as the performance of your Drum network.
           </p>
         </div>
-        <div class="col-sm-4">
-          <div class="icon-lg">
-            <img src="https://drumio.netlify.com/images/icons/icon_2.svg">
+        <div class='col-sm-4'>
+          <div class='icon-lg'>
+            <img src="https://d1q2i93v6nvie6.cloudfront.net/public/images/icons/icon_2.svg">
           </div>
           <h3>Get Paid</h3>
           <p>
-            Promote Businesses you love. Share offeres with friends, family, and strangers. Promote what you like, how
+            Promote businesses you love. Share offeres with friends, family, and strangers. Promote what you like, how
             you like, when you like.
           </p>
         </div>
@@ -175,266 +239,373 @@
 
 
       <div class="text-center">
-        <a href="#" class="btn btn-primary downloadApp">Download App</a>
+        <a href="" class='btn btn-primary downloadApp'>Download App</a>
       </div>
 
     </div>
   </section>
 
-  <section class="pad-section">
-    <div class="container">
-      <div class="mb-5 text-center container container-md">
-        <h2>Diversify your Revenue</h2>
+  <section class='pad-section'>
+    <div class='container'>
+      <!--
+  title
+  content
+  wrapper_class
+-->
+
+      <div class='mb-5 text-center container container-md'>
+        <h2>Ways to Make Money</h2>
 
         <p>
-          Our commission structure is rewarding and easy to understand.
+          Our earnings structure is rewarding and easy to understand.
         </p>
       </div>
-      <div class="row mb-5">
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-header bg-dark">
-              <h3 class="h4 mb-0">Promote Business</h3>
+
+
+      <!--
+  elements:
+    image_url
+    title
+    content
+-->
+
+      <div class='row mb-5'>
+        <div class='col-8 col-sm-6 col-md-4 col-lg-3 mx-auto mx-sm-0 mb-4 mb-md-4 mb-lg-0'>
+          <div class='card h-100'>
+            <div class='card-header bg-dark'>
+              <h3 class='h4 mb-0'>Promote Offers</h3>
             </div>
-            <img src="https://drumio.netlify.com/images/drummer-card-4.png">
-            <div class="card-body">
-              When a buyer redeems an offer you promoted you earn the displayed commission.
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-header bg-dark">
-              <h3 class="h4 mb-0">Sign Up Business</h3>
-            </div>
-            <img src="https://drumio.netlify.com/images/drummer-card-2.png">
-            <div class="card-body">
-              For each business you sign up, collect 5% commission for all redemptions they issue for 24 months.
+            <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/drummer-500-off.png'>
+            <div class='card-body'>
+              When a Buyer redeems an offer you shared, you earn the displayed commission.
             </div>
           </div>
         </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-header bg-dark">
-              <h3 class="h4 mb-0">Sign Up Buyers</h3>
+        <div class='col-8 col-sm-6 col-md-4 col-lg-3 mx-auto mx-sm-0 mb-4 mb-md-4 mb-lg-0'>
+          <div class='card h-100'>
+            <div class='card-header bg-dark'>
+              <h3 class='h4 mb-0'>Sign Up Businesses</h3>
             </div>
-            <img src="https://drumio.netlify.com/images/drummer-card-3.png">
-            <div class="card-body">
-              For each buyer you sign up, collect a 3% commission for ANY redemption the buyer makes for 24 months.
+            <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/drummers-5-percent.png'>
+            <div class='card-body'>
+              For each business you activate, Drum pays you a 5% bonus for ALL redemptions at the business for 24
+              months.
             </div>
           </div>
         </div>
-        <div class="col-sm-3">
-          <div class="card">
-            <div class="card-header bg-dark">
-              <h3 class="h4 mb-0">Sign Up Drummers</h3>
+        <div class='col-8 col-sm-6 col-md-4 col-lg-3 mx-auto mx-sm-0 mb-4 mb-md-4 mb-lg-0'>
+          <div class='card h-100'>
+            <div class='card-header bg-dark'>
+              <h3 class='h4 mb-0'>Sign Up Drummers</h3>
             </div>
-            <img src="https://drumio.netlify.com/images/drummer-card-4.png">
-            <div class="card-body">
-              For each drummer you sign up, collect a 15% bonus on top of what they earn.
+            <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/drummers-15-percent.png'>
+            <div class='card-body'>
+              For each Drummer you activate, Drum pays you a 15% bonus (or more) on ALL commissions earned by the
+              Drummer for 24 months.
+            </div>
+          </div>
+        </div>
+        <div class='col-8 col-sm-6 col-md-4 col-lg-3 mx-auto mx-sm-0 mb-4 mb-md-4 mb-lg-0'>
+          <div class='card h-100'>
+            <div class='card-header bg-dark'>
+              <h3 class='h4 mb-0'>Sign Up Buyers</h3>
+            </div>
+            <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/drummers-3-percent.png'>
+            <div class='card-body'>
+              For each Buyer you activate on the app, Drum pays you a 3% bonus for ALL offers the Buyer redeems for 24
+              months.
             </div>
           </div>
         </div>
       </div>
+
+
+      <div class="col-12 col-md-10 offset-md-1 text-center">
+        <p>A Business, Drummer or Buyer is activated when they sign up using your referral code and redeem an offer
+          within 60 days. Learn more at <a href="https://www.drum.io/earnings"
+            class="text-primary">drum.io/earnings</a>.</p>
+      </div>
+
       <div class="text-center">
-        <a href="#" class="btn btn-primary downloadApp">Download App</a>
+        <a href="" class='btn btn-primary downloadApp'>Download App</a>
       </div>
+
+
     </div>
   </section>
-  <section class="pad-section bg-light">
-    <div class="container container-lg">
-      <div class="mb-5 text-center container container-md">
-        <h2>Business Features</h2>
+
+  <section class='pad-section bg-light'>
+    <div class='container'>
+      <!--
+  title
+  content
+  wrapper_class
+-->
+
+      <div class='mb-5 text-center container container-md'>
+        <h2>Drummer Features</h2>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit.
+          Make money sharing offers for business you believe in. Gain freedom and be your own boss.
         </p>
       </div>
-      <div class="row mb-5">
-        <div class="col-sm-7">
-          <nav class="nav flex-column" id="nav-tab" role="tablist">
-            <a data-toggle="tab" class="nav-link text-dark active" href="#simple-signup">
-              <img src="https://drumio.netlify.com/images/icons/icon_23.svg" class="icon-sm">
-              <h3 class="pt-2 h4 display-inline-block pl-2">Simple Signup</h3>
-            </a>
-            <a data-toggle="tab" class="nav-link text-dark " href="#create-business-profile">
-              <img src="https://drumio.netlify.com/images/icons/icon_27.svg" class="icon-sm">
-              <h3 class="pt-2 h4 display-inline-block pl-2">Create Business Profile</h3>
-            </a>
-            <a data-toggle="tab" class="nav-link text-dark " href="#publish-offers">
-              <img src="https://drumio.netlify.com/images/icons/icon_25.svg" class="icon-sm">
-              <h3 class="pt-2 h4 display-inline-block pl-2">Publish Offers</h3>
-            </a>
-            <a data-toggle="tab" class="nav-link text-dark " href="#save-your-favorites">
-              <img src="https://drumio.netlify.com/images/icons/icon_26.svg" class="icon-sm">
-              <h3 class="pt-2 h4 display-inline-block pl-2">Save Your Favorites</h3>
-            </a>
-            <a data-toggle="tab" class="nav-link text-dark " href="#track-performance">
-              <img src="https://drumio.netlify.com/images/icons/icon_23.svg" class="icon-sm">
-              <h3 class="pt-2 h4 display-inline-block pl-2">Track Performance</h3>
-            </a>
-          </nav>
-        </div>
-        <div class="col-sm-5">
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="simple-signup" role="tabpanel" aria-labelledby="nav-home-tab">
-              <img src="https://drumio.netlify.com/images/features-buyer.png" class="mb-3">
 
-              <div class="content">
-                <strong>Simple Signup</strong>
-                <p>Simple Signup. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+      <!--
+  elements:
+    id
+    title
+    content
+    icon_url
+    image_url
+-->
+
+      <div id='nav-tab' role='tablist'>
+        <div class='row mb-5'>
+          <div class='col-sm-4'>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a data-toggle="tab" class="hover-card nav-link text-dark p-4 active" href="#browse-offers-businesses">
+                  <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/icons/icon_24.svg' class='icon-sm'>
+                  <h3 class='pt-2 h4'>Browse offers & businesses</h3>
+                  <p>Explore a huge selection of businesses you can promote on Drum.</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a data-toggle="tab" class="hover-card nav-link text-dark p-4 " href="#save-your-favorites">
+                  <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/icons/icon_47.svg' class='icon-sm'>
+                  <h3 class='pt-2 h4'>Save your favorites</h3>
+                  <p>Save your favorite business and offers on Drum for easy sharing.</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a data-toggle="tab" class="hover-card nav-link text-dark p-4 " href="#promote-offers">
+                  <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/icons/icon_1.svg' class='icon-sm'>
+                  <h3 class='pt-2 h4'>Promote offers</h3>
+                  <p>Share offers via text, email, social, or face-to-face via QR code.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class='col-sm-4 text-center hide-mobile'>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="browse-offers-businesses" role="tabpanel"
+                aria-labelledby="nav-home-tab">
+                <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/features-phone-browse.png'>
               </div>
-            </div>
-            <div class="tab-pane fade " id="create-business-profile" role="tabpanel" aria-labelledby="nav-home-tab">
-              <img src="https://drumio.netlify.com/images/default_wide.png" class="mb-3">
-
-              <div class="content">
-                <strong>Create Business Profile</strong>
-                <p>Create Business Profile. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="tab-pane fade " id="save-your-favorites" role="tabpanel" aria-labelledby="nav-home-tab">
+                <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/features-phone-fav.png'>
               </div>
-            </div>
-            <div class="tab-pane fade " id="publish-offers" role="tabpanel" aria-labelledby="nav-home-tab">
-              <img src="https://drumio.netlify.com/images/default_wide.png" class="mb-3">
-
-              <div class="content">
-                <strong>Publish Offers</strong>
-                <p>Publish Offers. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="tab-pane fade " id="promote-offers" role="tabpanel" aria-labelledby="nav-home-tab">
+                <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/features-phone-promote.png'>
               </div>
-            </div>
-            <div class="tab-pane fade " id="save-your-favorites" role="tabpanel" aria-labelledby="nav-home-tab">
-              <img src="https://drumio.netlify.com/images/default_wide.png" class="mb-3">
-
-              <div class="content">
-                <strong>Save Your Favorites</strong>
-                <p>Simple Signup. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="tab-pane fade " id="invite-businesses-buyers-drummers" role="tabpanel"
+                aria-labelledby="nav-home-tab">
+                <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/features-phone-invite.png'>
               </div>
-            </div>
-            <div class="tab-pane fade " id="track-performance" role="tabpanel" aria-labelledby="nav-home-tab">
-              <img src="https://drumio.netlify.com/images/default_wide.png" class="mb-3">
-
-              <div class="content">
-                <strong>Track Performance</strong>
-                <p>Create Business Profile. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <div class="tab-pane fade " id="get-paid-commissions" role="tabpanel" aria-labelledby="nav-home-tab">
+                <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/features-phone-paid.png'>
+              </div>
+              <div class="tab-pane fade " id="track-performance" role="tabpanel" aria-labelledby="nav-home-tab">
+                <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/features-phone-track-perf.png'>
               </div>
             </div>
           </div>
+          <div class='col-sm-4'>
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a data-toggle="tab" class="hover-card nav-link text-dark p-4"
+                  href="#invite-businesses-buyers-drummers">
+                  <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/icons/icon_47.svg' class='icon-sm'>
+                  <h3 class='pt-2 h4'>Invite businesses, buyers, Drummers</h3>
+                  <p>Earn ongoing bonuses for building your network. When they perform and redeem, you earn money.</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a data-toggle="tab" class="hover-card nav-link text-dark p-4" href="#get-paid-commissions">
+                  <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/icons/icon_2.svg' class='icon-sm'>
+                  <h3 class='pt-2 h4'>Get paid commissions</h3>
+                  <p>Get paid weekly on all the commissions earned from promoting offers as well as the performance of
+                    your network.</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a data-toggle="tab" class="hover-card nav-link text-dark p-4" href="#track-performance">
+                  <img src='https://d1q2i93v6nvie6.cloudfront.net/public/images/icons/icon_3.svg' class='icon-sm'>
+                  <h3 class='pt-2 h4'>Track performance</h3>
+                  <p>Track your personal promotion performance as well as the performance of your Drum network.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      <script type="text/javascript">
+        $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+          $('a[data-toggle="tab"]').removeClass('active');
+        });
+      </script>
+
+
       <div class="text-center">
-        <a href="#" class="btn btn-primary downloadApp">Download App</a>
+        <a href="" class='btn btn-primary downloadApp'>Download App</a>
       </div>
+
     </div>
   </section>
-  <hr class="special">
-  <section class="pad-section bg-primary">
-    <div class="container container-lg text-center">
-      <div class="mb-5 text-center">
-        <h2>Drum up business today!</h2>
+
+  <hr class='special'>
+
+  <section class='pad-section bg-primary'>
+    <div class='container container-lg text-center'>
+      <!--
+  title
+  content
+  wrapper_class
+-->
+
+      <div class='mb-5 text-center'>
+        <h2>Start Drumming Today</h2>
+
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit.
+
         </p>
       </div>
+
+
       <div class="text-center">
-        <a href="#" class="btn btn-light downloadApp">Download App</a>
+        <a href="" class='btn btn-light downloadApp'>Download App</a>
       </div>
-      <div class="pad-section-invert-bottom mt-5">
-        <img src="https://drumio.netlify.com/images/phone-home.png">
+
+
+      <div class='pad-section-invert-bottom mt-5'>
+        <img src="https://d1q2i93v6nvie6.cloudfront.net/public/images/phone-home.png">
       </div>
     </div>
   </section>
-  <footer class="bg-dark">
-    <div class="pad-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-md-4">
-            <img
-              src="https://2rywra36d1oq3c5qie3qdamb-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/logo2x-130x28.png"
-              class="mb-3">
-            <div class="mb-5">
-              <h3>Our Beliefs</h3>
-              <ul class="list-unstyled">
-                <li>You don't need a boss to earn a living</li>
-                <li>You control your destiny</li>
-                <li>Businesses are people too</li>
-                <li>Sharing is rewarding</li>
-                <li>Honesty and good customer service is paramount</li>
-                <li>Everyone marches to their own beat</li>
+
+
+  <footer class='bg-dark'>
+    <div class='pad-section'>
+      <div class='container-fluid'>
+        <div class='row'>
+          <div class='col-sm-6 col-md-4 px-4 px-md-5'>
+            <div class="logo-footer mb-3">
+              <img src="https://d1q2i93v6nvie6.cloudfront.net/public/images/drum-logo-footer.png" class='mb-4'>
+            </div>
+            <div class='mb-4'>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="mb-0 mb-md-4">
+                    <a href="../" class="text-white text-strong text-uppercase">Home</a>
+                  </div>
+                  <div class="mb-0 mb-md-4">
+                    <a href='../drummers.html' class="text-white text-strong text-uppercase">Drummers</a>
+                  </div>
+                  <div class="mb-0 mb-md-4">
+                    <a href='../buyers.html' class="text-white text-strong text-uppercase">Buyers</a>
+                  </div>
+                  <div class="mb-0 mb-md-4">
+                    <a href='../business.html' class="text-white text-strong text-uppercase">Businesses</a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="mb-0 mb-md-4">
+                    <a href='../drummer-guidelines.html' class="text-white text-strong text-uppercase">Drummer Tips</a>
+                  </div>
+                  <div class="mb-0 mb-md-4">
+                    <a href='../careers.html' class="text-white text-strong text-uppercase">Careers</a>
+                  </div>
+                  <div class="mb-0 mb-md-4">
+                    <a href='https://help.drum.io/hc/en-us' target="_blank"
+                      class="text-white text-strong text-uppercase">Support</a>
+                  </div>
+                </div>
+              </div>
+              <hr class="hr-footer my-5">
+              <div class="footer-social">
+                <li class='list-inline-item'>
+                  <a href='https://www.facebook.com/DrumTechnologies/' target="_blank" class='text-white'>
+                    <i class='fa fa-facebook fa-lg'></i>
+                  </a>
+                </li>
+                <li class='list-inline-item'>
+                  <a href='https://twitter.com/drum_app' target="_blank" class='text-white'>
+                    <i class='fa fa-twitter fa-lg'></i>
+                  </a>
+                </li>
+                <li class='list-inline-item'>
+                  <a href='https://www.instagram.com/drum.app/' target="_blank" class='text-white'>
+                    <i class='fa fa-instagram fa-lg'></i>
+                  </a>
+                </li>
+                <li class='list-inline-item'>
+                  <a href='https://www.linkedin.com/company/drumtechnologies/' target="_blank" class='text-white'>
+                    <i class='fa fa-linkedin fa-lg'></i>
+                  </a>
+                </li>
+              </div>
+            </div>
+          </div>
+          <div class='col-sm-6 col-md-4 px-4 px-md-5'>
+            <div class='mb-5'>
+              <h3 class="text-primary" id="footer-link">Our Beliefs</h3>
+              <ul class='list-unstyled'>
+                <li class="mb-2">You don't need a boss to earn a living.</li>
+                <li class="mb-2">You control your destiny.</li>
+                <li class="mb-2">Businesses are people too.</li>
+                <li class="mb-2">Sharing is rewarding.</li>
+                <li class="mb-2">Honesty and good customer service is paramount.</li>
+                <li class="mb-2">Everyone marches to their own beat.</li>
               </ul>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="mb-5">
-              <h3>Earn Money</h3>
-              <p>Drum enables anyone to earn money promoting businesses they believe in.</p>
-
-              <div class="">
-                <a href="#" class="btn btn-outline-light btn-sm downloadApp">Download App</a>
-              </div>
-
+          <div class='col-sm-6 col-lg-4 px-4 px-md-5'>
+            <a href='../drummers.html' class="btn btn-outline-light btn-sm w-100 mb-3">Become a Drummer</a>
+            <a href='../business.html' class="btn btn-outline-light btn-sm w-100 mb-3">Create my business account</a>
+            <a href='../buyers.html' class="btn btn-outline-light btn-sm w-100 mb-5">Give me the offers</a>
+            <div class="col-12 p-0 text-center text-md-right">
+              <p>Drummer & Buyer Apps available on</p>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <div class="mb-5">
-              <h3>Get Offers</h3>
-              <p>Drum is your personal concierge to great offers and curated experiences... brought to you by Drummers.
-              </p>
-
-              <div class="">
-                <a href="#" class="btn btn-outline-light btn-sm downloadApp">Download App</a>
-              </div>
+            <p id='btnAppBuyer'>BUYER</p><br>
+            <p id='btnAppDrummer'>DRUMMER</p><br>
+            <div class="col-12 p-0 mb-3 d-flex justify-content-between">
+              <a onclick="getLinkDownload('ANDROID')"><img
+                  src="https://d1q2i93v6nvie6.cloudfront.net/public/images/android_App_store_icon.png"></a>
+              <a class="ml-3" onclick="getLinkDownload('IOS')"><img
+                  src="https://d1q2i93v6nvie6.cloudfront.net/public/images/iOS_App_Store_Icon.png"></a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <p>Drum Technologies Inc. All rights reserved.</p>
+    <div class='container-fluid footer px-4 px-md-5'>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <p>&copy; Drum Technologies Inc. All rights reserved.</p>
         </div>
-        <div class="col-sm-6">
-          <ul class="list-inline text-right">
-            <li class="list-inline-item">
-              <a href="../privacy-policy.html" class="text-white">
-                Terms and Conditions
-              </a>
+        <div class='col-sm-6'>
+          <ul class='list-inline text-right'>
+            <li class='list-inline-item'>
+              <a href='../terms.html' class='text-white'>Terms of Service</a>
             </li>
-            <li class="list-inline-item">
-              <a href="../terms.html" class="text-white">
-                Pricacy Policy
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" class="text-white">
-                <i class="fa fa-facebook-square fa-lg"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" class="text-white">
-                <i class="fa fa-twitter-square fa-lg"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" class="text-white">
-                <i class="fa fa-instagram fa-lg"></i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" class="text-white">
-                <i class="fa fa-medium fa-lg"></i>
-              </a>
+            <li class='list-inline-item'>
+              <a href='../privacy.html' class='text-white'>Privacy</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
+
 </body>
 <script>
+  const btnAppBuyer = document.getElementById('btnAppBuyer');
+  const btnAppDrummer = document.getElementById('btnAppDrummer');
+  let linkDownloadApp = '';
+  let linkAppBuyer = '';
+  let linkAppDrummer = '';
   function getOS() {
     var userAgent = window.navigator.userAgent,
       platform = window.navigator.platform,
@@ -456,21 +627,50 @@
     return os;
   }
   var os = getOS();
-  let link = '';
+  function getLinkDownload(app) {
+    if (app === 'IOS' && os === 'iOS') {
+      console.log('IOS');
+      // Link for IOS App
+      btnAppBuyer.innerHTML = "${linkAppBuyerIOS}";
+      btnAppDrummer.innerHTML = "${linkAppDrummerIOS}";
+    } else if (app === 'ANDROID' && os === 'Android'){
+      // Link for App Android
+      console.log('Android');
+      btnAppBuyer.innerHTML = "${linkAppBuyerAndroid}";
+      btnAppDrummer.innerHTML = "${linkAppDrummerAndroid}";
+    } else {
+      // Web
+      console.log('Web');
+      btnAppBuyer.innerHTML = "${linkWebBuyerIOS}";
+      btnAppDrummer.innerHTML = "${linkWebDrummerIOS}";
+    }
+  }
+  
+  // Get link for button Download App
   if (os === 'iOS') {
-    link = "${linkAppleApp}";
+    linkDownloadApp = "${linkAppleApp}";
   } else if (os === 'Mac OS') {
-    link = "${linkAppleWeb}";
+    linkDownloadApp = "${config.linkServices.home}/#footer-link";
   } else if (os === 'Android') {
-    link = "${linkGoogleApp}";
+    linkDownloadApp = "${linkGoogleApp}";
   } else {
-    link = "${linkAppleWeb}";
+    linkDownloadApp = "${config.linkServices.home}/#footer-link";
   }
-  // Apply link download App
-  const items = document.getElementsByClassName("downloadApp");
-  for (let x = 0; x < items.length; x++) {
-    items[x].href = link;
+  
+  // const itemsDownloadAppAndroid = document.getElementsByClassName("downloadAppAndroid");
+  // const itemsDownloadAppIOS = document.getElementsByClassName("downloadAppIOS");
+  const itemsDownloadApp = document.getElementsByClassName("downloadApp");
+  // for (let x = 0; x < itemsDownloadAppAndroid.length; x++) {
+  //   itemsDownloadAppAndroid[x].href = linkDownloadAppAndroid;
+  // }
+  // for (let x = 0; x < itemsDownloadAppIOS.length; x++) {
+  //   itemsDownloadAppIOS[x].href = linkDownloadAppIOS;
+  // }
+  for (let x = 0; x < itemsDownloadApp.length; x++) {
+    itemsDownloadApp[x].href = linkDownloadApp;
   }
+  // const downloadAppBuyer = document.getElementById('downloadAppBuyer');
+  // const downloadAppDrummer = document.getElementById('downloadAppDrummer');
 </script>
 
 </html>
