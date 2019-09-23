@@ -568,7 +568,7 @@
             <div class="col-12 p-0 text-center text-md-right">
               <p>Drummer & Buyer Apps available on</p>
             </div>
-            <a href="itms-apps://itunes.apple.com/us/app/apple-store/id1458518029">APP IOS DRUM</a>
+            <a href="itms-apps://itunes.apple.com/us/app/apple-store/id1458518029">APP IOS DRUMMER</a>
             <p id='btnAppBuyer'>BUYER</p><br>
             <p id='btnAppDrummer'>DRUMMER</p><br>
             <div class="col-12 p-0 mb-3 d-flex justify-content-between">
@@ -634,19 +634,22 @@
       // Link for IOS App
       btnAppBuyer.innerHTML = "${linkAppBuyerIOS}";
       btnAppDrummer.innerHTML = "${linkAppDrummerIOS}";
-    } else if (app === 'ANDROID' && os === 'Android'){
+    } else if (app === 'ANDROID' && os === 'Android') {
       // Link for App Android
       console.log('Android');
       btnAppBuyer.innerHTML = "${linkAppBuyerAndroid}";
       btnAppDrummer.innerHTML = "${linkAppDrummerAndroid}";
-    } else {
+    } else if (app === 'ANDROID') {
       // Web
       console.log('Web');
+      btnAppBuyer.innerHTML = "${linkWebBuyerAndroid}";
+      btnAppDrummer.innerHTML = "${linkWebDrummerAndroid}";
+    } else {
       btnAppBuyer.innerHTML = "${linkWebBuyerIOS}";
       btnAppDrummer.innerHTML = "${linkWebDrummerIOS}";
     }
   }
-  
+
   // Get link for button Download App
   if (os === 'iOS') {
     linkDownloadApp = "${linkAppleApp}";
@@ -657,7 +660,7 @@
   } else {
     linkDownloadApp = "${config.linkServices.home}/#footer-link";
   }
-  
+
   // const itemsDownloadAppAndroid = document.getElementsByClassName("downloadAppAndroid");
   // const itemsDownloadAppIOS = document.getElementsByClassName("downloadAppIOS");
   const itemsDownloadApp = document.getElementsByClassName("downloadApp");
