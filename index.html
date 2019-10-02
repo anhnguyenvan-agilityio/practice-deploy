@@ -303,6 +303,8 @@
   </body>
   <script src="https://dcqrq41szd7cd.cloudfront.net/public/javascripts/download.js"></script>
   <script>
+    let userAgent = window.navigator.userAgent;
+    console.log(userAgent);
     var c = $('#qrcodeCanvas');
     c.qrcode({
       text: "s8IyyIlb"
