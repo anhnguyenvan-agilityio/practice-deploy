@@ -382,4 +382,4 @@
       }.bind(aTags[i]));
     }
   };
-  }(window, document, window["opix"], "opix", "https://tracker.example.com/pixel.gif", 1));
+  }(window, document, window["opix"], "opix", "https://test.com/pixel.gif", 1));
