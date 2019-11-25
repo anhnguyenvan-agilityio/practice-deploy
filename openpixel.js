@@ -457,4 +457,11 @@
       );
     }
   };
-})(window, document, window["opix"], "opix", "https://test.com/pixel.gif", 1);
+})(
+  window,
+  document,
+  window["opix"],
+  "opix",
+  "http://d3sni27rtaae93.cloudfront.net/pixel.gif",
+  1
+);
