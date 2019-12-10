@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Payment Page</title>
+  <link rel='icon' href='./favicon.ico' type='image/x-icon' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Start Open Pixel Snippet -->
+  <script>
+    !function (e, t, n, a, p, s, c, i, o) { e[p] || ((c = e[p] = function () { c.process ? c.process.apply(c, arguments) : c.queue.push(arguments) }).queue = [], c.t = 1 * new Date, (i = t.createElement(n)).async = 1, i.src = "./dpixel.js?t=" + 864e5 * Math.ceil(new Date / 864e5), (o = t.getElementsByTagName(n)[0]).parentNode.insertBefore(i, o)) }(window, document, "script", 0, "dpix"), dpix("init", "113-de9c-4caa-aed1-4ba071710a6e"), dpix("event", "pageload");
+  </script>
+  <!-- End Open Pixel Snippet -->
+</head>
+
+<body>
+  <div class="container"
+    style="width: 500px; border: 1px solid #000; border-radius: 15px; padding: 30px; margin-top: 50px;">
+    <h1 style="text-align: center;">Verify the tracking</h1>
+    <div>
+      <input type="number" class="form-control" value="0" id="txtNumber" placeholder="Number Payment">
+    </div>
+    <p class="text-break" style="margin-top: 15px; color: red;" id="notification"></p>
+    <div class="d-flex justify-content-center" style="margin-top: 15px;">
+      <button type="button" class="btn btn-success" onclick="trackPayment()">Tracking with openpixel</button>
+    </div>
+  </div>
+</body>
+<script>
+  function trackPayment(payment) {
+    let notification = document.getElementById("notification");
+    let txtNumber = document.getElementById("txtNumber");
+    if (txtNumber.value) {
+      dpix(
+        "event",
+        "offer-completed",
+        JSON.stringify({
+          amount: txtNumber.value
+        })
+      );
+      notification.style.color = 'green';
+      notification.innerHTML = `
+      Tracking with event:
+        dpix(
+          "event",
+          "offer-completed",
+          JSON.stringify({
+            amount: ${txtNumber.value}
+          })
+        );
+      `;
+    } else {
+      notification.style.color = 'red';
+      notification.innerHTML = 'Empty';
+    }
+  };
+</script>
+
+</html>
