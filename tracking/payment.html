@@ -37,9 +37,9 @@
       dpix(
         "event",
         "offer-completed",
-        JSON.stringify({
+        {
           amount: txtNumber.value
-        })
+        }
       );
       notification.style.color = 'green';
       notification.innerHTML = `
@@ -47,9 +47,9 @@
         dpix(
           "event",
           "offer-completed",
-          JSON.stringify({
+          {
             amount: ${txtNumber.value}
-          })
+          }
         );
       `;
     } else {
