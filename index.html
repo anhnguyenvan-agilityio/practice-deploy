@@ -37,6 +37,7 @@
           alert('problem when loading the S3 buckets objects');
         }
         else {
+          console.log('content ==>', data.Contents);
           alert('you have ' + data.Contents.length + ' objects on you bucket');
         }
       });
