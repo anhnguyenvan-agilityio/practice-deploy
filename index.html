@@ -22,7 +22,7 @@
       // The ID token you need to pass to your backend:
       const id_token = googleUser.getAuthResponse().id_token;
       console.log("ID Token: " + id_token);
-      AWS.config.region = 'us-west-1';
+      AWS.config.region = 'us-east-1';
       const roleARN = 'arn:aws:iam::281135352714:role/google-access-s3';
       var awsConfig = {
         RoleArn: roleARN,
