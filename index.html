@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google-signin-scope" content="profile email">
-  <meta name="google-signin-client_id" content="925168591005-1ngve1j830qpinv2luc49djmqjbk1vum.apps.googleusercontent.com">
+  <meta name="google-signin-client_id"
+    content="925168591005-1ngve1j830qpinv2luc49djmqjbk1vum.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.596.0.min.js"></script>
   <title>Auth Google Example</title>
 </head>
 
@@ -16,17 +18,28 @@
   <script>
     function onSignIn(googleUser) {
       // Useful data for your client-side scripts:
-      var profile = googleUser.getBasicProfile();
-      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-      console.log('Full Name: ' + profile.getName());
-      console.log('Given Name: ' + profile.getGivenName());
-      console.log('Family Name: ' + profile.getFamilyName());
-      console.log("Image URL: " + profile.getImageUrl());
-      console.log("Email: " + profile.getEmail());
-
+      const profile = googleUser.getBasicProfile();
       // The ID token you need to pass to your backend:
-      var id_token = googleUser.getAuthResponse().id_token;
+      const id_token = googleUser.getAuthResponse().id_token;
       console.log("ID Token: " + id_token);
+      AWS.config.region = 'us-west-1';
+      const roleARN = 'arn:aws:iam::281135352714:role/google-access-s3';
+      var awsConfig = {
+        RoleArn: roleARN,
+        WebIdentityToken: id_token,
+        RoleSessionName: 'web'
+      };
+      // and configure the AWS credentials
+      AWS.config.credentials = new AWS.WebIdentityCredentials(awsConfig);
+      const myBucket = new AWS.S3({ params: { Bucket: 'anh-assets' } });
+      myBucket.listObjects(function (error, data) {
+        if (error) {
+          alert('problem when loading the S3 buckets objects');
+        }
+        else {
+          alert('you have ' + data.Contents.length + ' objects on you bucket');
+        }
+      });
     };
   </script>
 </body>
